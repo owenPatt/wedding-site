@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #2f4238;
+  --sage: #798f7f;
+  --cream: #f7f3ea;
+  --blush: #ead8ce;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(255, 255, 255, 0.9),
+      rgba(247, 243, 234, 0.75) 45%,
+      rgba(218, 228, 216, 0.7)
+    ),
+    linear-gradient(145deg, #f8f3e9, #dfe8dd);
+}
+
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  border: 1px solid rgba(121, 143, 127, 0.28);
+  border-radius: 50%;
+}
+
+.hero::before {
+  top: -12rem;
+  left: -9rem;
+  box-shadow:
+    0 0 0 2rem rgba(255, 255, 255, 0.12),
+    0 0 0 5rem rgba(121, 143, 127, 0.06);
+}
+
+.hero::after {
+  right: -12rem;
+  bottom: -13rem;
+  box-shadow:
+    0 0 0 2rem rgba(255, 255, 255, 0.12),
+    0 0 0 5rem rgba(121, 143, 127, 0.06);
+}
+
+.botanical {
+  position: absolute;
+  color: rgba(75, 103, 85, 0.35);
+  font-family: serif;
+  font-size: 13rem;
+  line-height: 1;
+}
+
+.botanical-left {
+  left: -2rem;
+  bottom: 4%;
+  transform: rotate(-28deg);
+}
+
+.botanical-right {
+  right: -2rem;
+  top: 5%;
+  transform: scaleX(-1) rotate(-28deg);
+}
+
+.eyebrow,
+.card-label {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font: 600 0.68rem Montserrat, sans-serif;
+}
+
+.eyebrow {
+  margin: 0 0 2rem;
+  color: #657b6c;
+}
+
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid rgba(75, 103, 85, 0.5);
+  border-radius: 50%;
+  font: 500 1.25rem 'Cormorant Garamond', serif;
+  margin-bottom: 1.6rem;
+  background: rgba(255, 253, 249, 0.45);
+}
+
+.monogram span,
+h1 span {
+  color: #a9796d;
+  font-style: italic;
+}
+
+h1 {
+  font: 500 clamp(4rem, 12vw, 8rem) / 0.82 'Cormorant Garamond', serif;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #a9796d;
+  margin: 2rem 0 1.35rem;
+  font-size: 0.7rem;
+}
+
+.divider i {
+  display: block;
+  width: 4rem;
+  height: 1px;
+  background: #9aad9e;
+}
+
+.date {
+  font: 500 clamp(1.2rem, 3vw, 1.5rem) 'Cormorant Garamond', serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+}
+
+.location {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font: 500 0.67rem Montserrat, sans-serif;
+  color: #6d7d72;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  font: 500 0.58rem Montserrat, sans-serif;
+}
+
+.scroll-cue b {
+  font-size: 1rem;
+  animation: float 1.8s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.welcome {
+  max-width: 1100px;
+  margin: auto;
+  padding: 6rem 1.5rem 7rem;
+  text-align: center;
+}
+
+.script {
+  font: italic 500 1.35rem 'Cormorant Garamond', serif;
+  color: #a9796d;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font: 500 clamp(2.6rem, 6vw, 4.4rem) / 1 'Cormorant Garamond', serif;
+  margin: 0 auto 1.5rem;
+  max-width: 700px;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 0 auto 3.5rem;
+  color: #657168;
+  font: 400 0.95rem/1.9 Montserrat, sans-serif;
+}
+
+.gift-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.gift-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+  border: 1px solid rgba(66, 89, 73, 0.15);
+  background: rgba(255, 253, 249, 0.72);
+  box-shadow: 0 18px 60px rgba(55, 74, 61, 0.08);
+}
+
+.gift-card::after {
+  content: '';
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  border: 1px solid rgba(121, 143, 127, 0.14);
+  border-radius: 50%;
+  right: -5rem;
+  top: -5rem;
+}
+
+.amazon-card {
+  background: rgba(235, 224, 216, 0.55);
+}
+
+.icon-wrap {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dfe8dd;
+  margin-bottom: 2rem;
+}
+
+.amazon-card .icon-wrap {
+  background: #ead8ce;
+}
+
+.icon-wrap svg {
+  width: 1.35rem;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card-label {
+  color: #7b8d80;
+  margin: 0 0 0.65rem;
+}
+
+h3 {
+  font: 500 2rem/1.05 'Cormorant Garamond', serif;
+  margin: 0 0 1rem;
+}
+
+.gift-card > p:not(.card-label) {
+  color: #667168;
+  font: 400 0.85rem/1.75 Montserrat, sans-serif;
+  min-height: 4.5rem;
+}
+
+.gift-card a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.7rem;
+  padding: 1rem 1.2rem;
+  color: white;
+  background: var(--ink);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font: 600 0.67rem Montserrat, sans-serif;
+  transition: 0.25s ease;
+}
+
+.gift-card a:hover {
+  background: #597061;
+  transform: translateY(-2px);
+}
+
+.gift-card a span {
+  font-size: 1rem;
+}
+
+footer {
+  background: var(--ink);
+  color: #f7f3ea;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.footer-heart {
+  color: #d7b6aa;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font: italic 500 1.55rem 'Cormorant Garamond', serif;
+  margin: 0 0 0.8rem;
+}
+
+footer small {
+  font: 500 0.58rem Montserrat, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #b7c4bb;
+}
+
+@media (max-width: 650px) {
+  .botanical {
+    font-size: 9rem;
+    opacity: 0.7;
+  }
+
+  .gift-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .gift-card > p:not(.card-label) {
+    min-height: auto;
+  }
+
+  .welcome {
+    padding-top: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .scroll-cue b {
+    animation: none;
+  }
+}
