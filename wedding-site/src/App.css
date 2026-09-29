@@ -286,9 +286,11 @@ h2 {
   transform: translateY(-2px);
 }
 .venue-gallery {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .venue-gallery img {
   /*width: 100%;*/
