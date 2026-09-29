@@ -576,12 +576,18 @@ footer small {
   }
   .venue-gallery {
     margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .venue-gallery .venue-main {
     height: 260px;
+    margin: auto;
   }
   .venue-gallery img {
-    height: 140px;
+    height: 260px;
+    margin: auto;
   }
   .gift-card > p:not(.card-label) {
     min-height: auto;
