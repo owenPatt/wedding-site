@@ -291,8 +291,8 @@ h2 {
   gap: 0.8rem;
 }
 .venue-gallery img {
-  width: 100%;
-  height: 190px;
+  /*width: 100%;*/
+  height: 340px;
   object-fit: cover;
 }
 .venue-gallery .venue-main {
